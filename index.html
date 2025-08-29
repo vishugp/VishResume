@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="pdfViewer" src=""></iframe>
+
+  <script>
+    fetch('latest_resume.txt')
+        .then(response => {
+            if (!response.ok) throw new Error("Resume path file not found.");
+            return response.text();
+        })
+        .then(path => {
+            let trimmedPath = path.trim();
+
+            // trimmedPath = `https://raw.githubusercontent.com/vishugp/Resume/main/${trimmedPath}`;
+            trimmedPath = `../../${trimmedPath}`
+            console.log("No SideBar");
+
+            const viewerSrc = `pdfjs/web/viewer.html?file=${encodeURIComponent(trimmedPath)}&sidebar=0`;
+            document.getElementById("pdfViewer").src = viewerSrc;
+        })
+        .catch(err => {
+            console.error("Failed to load resume path:", err);
+            document.body.innerHTML = `
+            <h2>Could not load resume.</h2>
+            <p>Please contact Vishwanath at 
+            <a href='mailto:vishguru2704@gmail.com'>vishguru2704@gmail.com</a>.</p>`;
+        });
+
+  </script>
+</body>
+</html>
