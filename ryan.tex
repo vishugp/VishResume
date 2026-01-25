@@ -1,0 +1,177 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{1.08} 
+\usepackage{ragged2e}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[letterpaper,top=0.4in,bottom=0.4in,left=0.55in,right=0.55in]{geometry}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0.08003pt}
+\setlength{\footskip}{4.08003pt}
+
+\titleformat{\section}{\scshape\raggedright\normalsize}{}{-0.1em}{\vspace{-1pt}}[\color{black}\titlerule\vspace*{-5pt}]
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item{\small{#1}}}
+\newcommand{\resumeeduSubheading}[4]{
+  \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\large{#1}} & {\small{#4}} \\
+      {{\small{#3}}} & {{\small{#2}}}
+    \end{tabular*}
+  \vspace{-0.4cm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\large{#1}}, {#3} & {\small{#4}} 
+      % {{\small{#3}}} & {{\small{#2}}}
+    \end{tabular*}
+  \vspace{-0.6cm}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{-1pt}\begin{itemize}[leftmargin=0.18in, label=\textbullet]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%------------------------------------------------------------
+\def\Summary{
+Hands-on Data Science Manager with 3+ years leading ML/AI teams and delivering production-ready high-impact analytics in healthcare, retail, and operations. Expert in Python, Azure Databricks, MLflow with specialty in LLM fine-tuning, PEFT, RAG, and scalable cloud pipelines. Proven track record in POC-to-production delivery in over 30 projects, mentoring high-performing teams, and generating measurable business impact.
+}
+
+\begin{document}
+
+% Header/Contact Information
+\def\name{Vish Guruvayur}
+\def\phone{(571) 602-2034}
+\def\city{Gainesville, VA}
+\def\email{vishguru2704@gmail.com}
+\def\LinkedIn{linkedin.com/in/vishgp}
+\def\github{vishugp}
+\def\role{Data Scientist / AI Manager}
+\def\paperlink{https://ceur-ws.org/Vol-4010/itb25_s2s3.pdf}
+\def\salink{https://www.credly.com/badges/12da6e0d-aa6a-4a6e-a598-93941c4a35c6}
+\def\mllink{https://www.credly.com/badges/c8b32ca5-03da-4578-a92f-9e11d0011ee8}
+
+\vspace*{-30pt}
+\begin{center}
+    {\Huge{\textbf{\name}}}\\
+    \vspace{3pt}
+    \footnotesize 
+    \href{tel:+1 \phone}{\phone} $|$ 
+    \href{mailto:\email}{{\email}} $|$ 
+    \href{https://github.com/\github}{github.com/\github} $|$
+    \href{https://www.linkedin.com/in/vishgp}{\LinkedIn} $|$
+    \href{https://vishguru.com}{{vishguru.com}}
+\end{center}
+\vspace{-30pt}
+
+\section{Summary}
+\small{\Summary}
+\vspace{-12pt}
+
+%-------------------EXPERIENCE---------------------------
+\section{Experience}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+    {Applied AI Engineer / Manager}
+    {Charlottesville, VA}
+    {University of Virginia (Part-time)}
+    {Nov 2024 - Present}
+    
+    \resumeItemListStart
+        \resumeItem{Leading cross-functional research on \textbf{multimodal RAG} methods for instructional content, including text, images, and video, to improve retrieval accuracy and summarization quality for students.}
+        \resumeItem{Built and optimized a scalable pipeline managing \textbf{10,000+ multimodal embeddings} using LangChain and Pinecone DB, designing retrieval experiments that reduced LLM compute costs by 20\% while enhancing relevance of responses.}
+        \resumeItem{Co-authored a \href{\paperlink}{\textbf{peer-reviewed paper} (\underline{link})} presented at AI for Education 2025, introducing novel evaluation metrics for multimodal retrieval and winning ``Most Compelling Data Visualizations'' at UVA Capstone Showcase.}
+        % \resumeItem{Conducting R\&D on a \textbf{GraphRAG-based LLM assistant} to leverage structured retrieval over temporally-linked classroom content, enhancing student support and guiding instructional content design.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Senior Data Science Manager (Team Lead)}
+    {Bethlehem, PA}
+    {Piramal Pharma Ltd.}
+    {Jan 2022 - Jun 2024}
+
+    \resumeItemListStart
+        \resumeItem{Established and \textbf{led the Data Science team} for the Critical Care division, embedding analytics into all key business functions and mentoring junior scientists to deliver end-to-end solutions with production-grade quality.}
+        \resumeItem{Built a \textbf{real-time web-scraping + NLP engine} using Python, PySpark, and AWS Lambda to monitor competition and feed A/B-tested ad optimizations, reducing advertising cost of sales by 37\% within 6 months.}
+        \resumeItem{Designed and deployed \textbf{ARIMA + Causal Inference forecasting} pipelines on Databricks, analyzing inventory, sales, and demand data to prevent \$1.2M in quarterly write-off losses and enable targeted operational interventions.}
+        \resumeItem{Delivered \textbf{30+ ML and analytics pipelines} using Databricks and SQL, incorporating automated KPI dashboards, retraining triggers, and CI/CD pipelines, resulting in an 85\% improvement in operational efficiency.}
+        \resumeItem{Partnered with CFO to transform TB-scale market data using Python and Spark, building market segmentation and ranking models with interactive Power BI dashboards to guide strategic capital allocation and portfolio decisions.}
+        \resumeItem{Implemented data governance, pipeline monitoring, and best practices across all ML deployments, ensuring reproducibility, compliance, and high reliability in production systems.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Data Scientist}
+    {Mumbai, India}
+    {Piramal Pharma Ltd.}
+    {Jul 2021 - Dec 2021}
+
+    \resumeItemListStart
+        \resumeItem{Built the company’s first \textbf{product recommendation engine} using a tree-based FP-Growth algorithm implemented from scratch, driving a 15\% increase in market penetration across 400,000 retailers.}
+        \resumeItem{Developed an \textbf{attrition prediction service} using XGBoost and Logistic Regression ensembles, integrating SHAP-based interpretability to retain 93\% of high-performing sales personnel.}
+        % \resumeItem{Collaborated with cross-functional teams to translate analytics insights into actionable business strategies, laying the foundation for enterprise-wide adoption of data science capabilities.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-18pt}
+
+%----------------- CERTIFICATIONS -----------------
+\section{Certifications}
+\resumeItemListStart
+\resumeItem{
+\href{\salink}{{AWS Certified Solutions Architect – Associate (SAA-C03), Amazon Web Services}} 
+\hfill{May 2025 - May 2028}}\vspace{-7pt}
+\resumeItem{
+\href{\mllink}{{AWS Certified Machine Learning – Specialty (MLS-C01), Amazon Web Services}} 
+\hfill{Jun 2025 - Jun 2028}}
+\resumeItemListEnd
+\vspace{-21pt}
+
+%----------------- SKILLS ------------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.00in, label={}, itemsep=1px, parsep=0pt]
+\item{\textbf{Leadership \& Management:} Hiring, mentoring, roadmap definition, POC-to-prod delivery, cross-functional collaboration}
+\item{\textbf{LLMs \& GenAI:} Transformers, HuggingFace, LangChain, RAG, LLM fine-tuning, PEFT (LoRA, IA3), prompt engineering.}
+\item{\textbf{Machine Learning:} Regression, GBMs, XGBoost, Ranking/Scoring, NLP, Recommendation Systems}
+\item{\textbf{Programming \& Tools:} Python, R, SQL, Scala, JavaScript; Power BI, Plotly Dash, d3.js, Matplotlib, Excel VBA.}
+\item{\textbf{Cloud \& MLOps:} Azure Databricks, MLflow, Spark, Delta Lake, ADLS/Blob Storage, Docker, CI/CD pipelines}
+\end{itemize}
+\vspace{-18pt}
+
+%-------------------EDUCATION---------------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeeduSubheading
+    {University of Virginia {(UVA)}}
+    {Charlottesville, VA}
+    {Master of Science in Data Science, GPA: 4.0/4.0}
+    {Jun 2024 - May 2025}
+\vspace{10pt}
+\resumeeduSubheading
+    {Birla Institute of Technology and Science (BITS Pilani)}
+    {Hyderabad, India}
+    {B.E. Mechanical Engineering, Minor in Data Science, GPA: 3.8/4.0}
+    {Aug 2018 - Dec 2021}
+\resumeSubHeadingListEnd
+
+\end{document}
