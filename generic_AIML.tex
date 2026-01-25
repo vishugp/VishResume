@@ -1,0 +1,435 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+% \linespread{1.08} 
+
+\usepackage{ragged2e}
+\input{glyphtounicode}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% % Margins
+% \usepackage[margin=0.5in]{geometry}
+\usepackage[letterpaper,top=0.4in,bottom=0.4in,left=0.55in,right=0.55in]{geometry}
+
+
+% Basic settings
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0.08003pt}
+\setlength{\footskip}{4.08003pt}
+
+% % Section formatting
+% \titleformat{\section}
+% {\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule]
+\titleformat{\section}{\scshape\raggedright\normalsize}{}{-0.1em}{\vspace{-1pt}}[\color{black}\titlerule\vspace*{-5pt}]
+
+
+% PDF settings
+\pdfgentounicode=1
+
+% Custom commands
+
+
+\newcommand{\resumeItem}[1]{
+% \justifying
+  \item{\small{#1}}
+  \vspace{-2pt}
+}
+
+% % \textbf{-}
+% \newcommand{\resumeProject}[2]{
+% \justifying
+%   \item{\small{\textbf{\small{#1}}}: {#2}}
+% }
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\large{#1}}, {#3} & {\small{#4}} 
+      % {{\small{#3}}} & {{\small{#2}}}
+    \end{tabular*}
+  \vspace{-0.75cm}
+}
+
+\newcommand{\resumeEduSubheading}[4]{
+  \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\large{#1}} & {\small{#4}} \\
+      {{\small{#3}}} & {{\small{#2}}}
+    \end{tabular*}
+  \vspace{-0.5cm}
+}
+
+% \newcommand{\resumeSubheading}[4]{
+%   \item
+%     \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+%       \textbf{\large{#1}} \normalsize{#3}& {\small{#4}} 
+%     \end{tabular*}
+%   \vspace{-0.4cm}
+% }
+
+% List environment commands
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\renewcommand\labelitemii{$\vcenter{\hbox{$\bullet$}}$}
+\newcommand{\resumeItemListStart}{
+\vspace{-2pt}
+  \begin{itemize}[leftmargin=0.15in, label=\textbullet]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%------------------------------------------------------------
+
+
+\def\Summary{
+Machine Learning Engineer with 3+ years of experience building end-to-end ML systems, deploying monitoring and reporting pipelines, and fine-tuning LLMs for real-world applications. Skilled in Python, PyTorch, HuggingFace, and Spark with expertise in scalable training pipelines, feedback loops, and parameter-efficient fine-tuning (LoRA, Q-LoRA, IA3). AWS Certified (Solutions Architect, ML Specialty) with a track record of delivering robust ML models that optimize performance and cost. M.S. in Data Science (UVA, GPA 4.0) with published research on multimodal LLMs and RAG-based architectures.
+
+}
+
+
+%------------------------------------------------------------
+
+\begin{document}
+
+
+% Header/Contact Information
+\def\name{Vish Guruvayur}
+\def\phone{(571) 602-2034}
+\def\city{Gainesville, VA (Open to Relocate)}
+\def\email{vishguru2704@gmail.com}
+\def\LinkedIn{linkedin.com/in/vishgp}
+\def\github{vishugp}
+\def\role{Applied Scientist}
+\def\paperlinkold{https://intextbooks.science.uu.nl/workshop2025/files/iTextbooks2025_paper_3.pdf}
+\def\paperlink{https://ceur-ws.org/Vol-4010/itb25_s2s3.pdf}
+\def\salink{https://www.credly.com/badges/12da6e0d-aa6a-4a6e-a598-93941c4a35c6}
+\def\mllink{https://www.credly.com/badges/c8b32ca5-03da-4578-a92f-9e11d0011ee8}
+
+% \vspace*{-30pt}
+% \begin{center}
+%     {\Huge{\textbf{{\name}}}}\\
+%     % \\ \vspace{3pt}
+%     % {\LARGE{\role}}
+%     \vspace{1pt}
+%     \footnotesize 
+    
+%     \href{tel:+1 \phone}{\phone} $|$ 
+%     \href{mailto:\email}{{\email}} $|$ 
+%     \href{https://github.com/\github}{github.com/\github} $|$
+%     \href{https://www.linkedin.com/in/vishgp}{\LinkedIn} $|$
+%     \href{https://vishguru.com}{{vishguru.com}}
+% \end{center}
+
+
+\vspace*{-30pt}
+\begin{center}
+    {\huge \textbf{\name}}
+    \\ \vspace{3pt}
+    {\Large{\role}}
+\end{center}
+
+\vspace{-45pt}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \footnotesize
+    \begin{minipage}[t]{0.4\textwidth}
+       
+        \href{tel:\phone}{\phone}\\
+        \href{mailto:\email}{\email}\\
+        \city
+    \end{minipage} 
+    &
+    \begin{minipage}[t]{0.4\textwidth}\raggedleft
+    \footnotesize
+        \href{https://github.com/\github}{{github.com/\github}}\\
+        \href{\LinkedIn}{{linkedin.com/in/vishgp}}\\
+        \href{https://vishguru.com}{{Website: www.vishguru.com}}
+    \end{minipage}
+\end{tabular*}
+\vspace{-16pt}
+% % \justifying
+% \section{Summary}
+% \small{\Summary}
+% \vspace{-10pt}
+
+%-------------------EXPERIENCE---------------------------
+\section{Experience}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+    {AI Research Scientist}
+    {Charlottesville, VA}
+    {University of Virginia (Part Time)}
+    {Nov 2024 - Present}
+    
+    \resumeItemListStart
+        \resumeItem{Leading cross-functional development of a personal AI Tutor driven by \textbf{multimodal and hybrid RAG} systems (\href{https://github.com/MSDS-Capstone-Project/MultiModalRAG}{\underline{link}}) for  classroom content (text, images, and videos) to improve content retrieval, comprehension, and summarization.}
+    
+        \resumeItem{Built a scalable RAG pipeline with \textbf{10,000+ multimodal embeddings} using LangChain and Pinecone DB, with retrieval experiments to optimize used media vectors, improving answer relevance and \textbf{reducing LLM compute cost by 20\%}.}
+    
+        \resumeItem{Co-authored a \href{\paperlink}{\textbf{peer-reviewed paper} ({\underline{link}})} presented at AI for Education 2025, introducing novel techniques for educational content retrieval and evaluation; awarded “Most Compelling Data Visualizations” at UVA's Capstone Showcase.}
+    
+        % \resumeItem{Currently conducting R\&D on a \textbf{GraphRAG-based LLM assistant}, extending prior research to leverage structured retrieval over temporally-linked educational content, enhancing student support and informing instructional content design.}
+    \resumeItemListEnd
+
+
+
+\resumeSubheading
+    {Senior Data Scientist (Tech Lead)}
+    {Bethlehem, PA}
+    {Piramal Pharma Ltd.}
+    {Jan 2022 - Jun 2024}
+
+    \resumeItemListStart
+    % \resumeItem{Established and \textbf{led the Data Science team} for the Critical Care division, embedding analytics into key business functions while mentoring junior scientists to deliver scalable end-to-end solutions with best practices.}
+
+    % \resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by providing analytical visibility into risk conditions through causal inference and SARIMA-based time-series forecasting of inventory, write-offs, and sales under volatile market conditions.}
+
+    % \resumeItem{Reduced Advertising Cost of Sales \textbf{from 45\% to 8\% in 6 months} for high-priority e-commerce products by leveraging alternative data through web-scraping and NLP to drive market segmentation and A/B-tested ad keyword optimizations.}
+
+    % \resumeItem{Partnered with CFO and senior leadership to develop market segmentation models and competitive intelligence dashboards (AWS, Power BI), guiding capital allocation, price elasticity, and portfolio growth decisions across 5 global regions.}
+
+    % \resumeItem{Received the “Piramal Excellence Award” for building \textbf{30+ ML and analytics pipelines} with PySpark CI/CD to automate retraining triggers and KPI reporting, improving operational efficiency by 85\%.}
+
+    % \resumeItem{Enabled CHRO-led initiatives to improve employee retention by developing an \textbf{NLP-based sentiment analytics engine} (VADER, TextBlob) that analyzed performance reviews to identify development areas and guide personalized growth plans.}
+
+
+    \resumeItem{Established and \textbf{led the Data Science team} for Critical Care division, embedding high-impact analytics into key business functions and mentoring junior scientists to deliver scalable end-to-end solutions with best practices.}
+
+
+    \resumeItem{Built a \textbf{real-time web-scraping + NLP engine} using Python, Spark and AWS Lambda to monitor competition, drive market segmentation, and feed A/B-tested ad optimizations, reducing advertising cost of sales from 45\% to 8\% in 6 months.}
+
+    % \resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by ranking inventory risk using causal inference and ARIMA-based forecasting of stock, write-offs, and sales under volatile demand, enabling targeted interventions and continuous monitoring.}
+    \resumeItem{Developed \textbf{ARIMA + Causal Inference} based analytical system on Databricks using inventory, sales and demand data, enabling targeted inventory interventions, preventing \textbf{\$1.2M} in quarterly write-off losses.}
+
+    \resumeItem{Delivered \textbf{30+ ML and analytics pipelines} using Databricks and SQL to automate KPI reporting dashboards, model retraining triggers and CI/CD, improving overall operational efficiency by 85\%.}
+
+    
+    \resumeItem{Worked with CFO to \textbf{transform TB-scale market data} using Python and Spark on AWS, building market segmentation and ranking models, with interactive Power BI dashboards to inform strategic investment and portfolio decisions.}
+
+    
+    
+    
+    
+
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+    
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Data Scientist}
+    {Mumbai, India}
+    {Piramal Pharma Ltd.}
+    {Jul 2021 - Dec 2021}
+
+    \resumeItemListStart
+    % \resumeItem{Intern in the Consumer Products division, delivering data science projects with high-impact in business-facing initiatives.}
+
+    % \resumeItem{Drove a \textbf{15\% quarterly increase} in market penetration across 400,000 retailers by building the company’s first product recommendation system, coding a tree-based custom FP-Growth algorithm from scratch.}
+
+    \resumeItem{Built company's first  product recommendation engine using the tree-based \textbf{FP-Growth Algorithm} (coded from scratch), driving \textbf{15\%} market penetration growth \textbf{across 400,000 retailers}.}
+
+    % \resumeItem{Boosted high-performing sales reps’ \textbf{retention to 93\%} by developing an attrition prediction model using an ensemble of XGBoost and Logistic Regression on historical sales and employee data.}
+
+    \resumeItem{Developed attrition prediction service by building an ensemble model of \textbf{XGBoost + Logistic Regression}, with integrated SHAP-based interpretability, \textbf{achieving 93\% retention} of high performers.}
+
+
+
+    % \resumeItem{Recognized for impact by the CEO and offered a leadership role to build and head a new data science team.}
+    \resumeItemListEnd
+    
+    
+
+\resumeSubHeadingListEnd
+\vspace{-21pt}
+
+
+\section{Relevant Projects}
+
+
+\small{
+
+{\textbf{LLM Fine-Tuning and PEFT Experiments} (\href{https://github.com/vishugp/Comparative_LLM_FineTuning}{\underline{link}}) $|$ GenAI - \emph{HuggingFace, PyTorch, LoRA, QLoRA, IA$^3$}} \hfill{2025}\vspace{-4pt}
+\begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+\item Benchmarked GPT-2 models on CommonsenseQA with full-model vs. PEFT fine-tuning.
+\item Optimized accuracy vs. compute trade-offs to demonstrate scalable LLM adaptation strategies.
+
+% \item Evaluated trade-offs in accuracy, efficiency, and resource cost for LoRA, QLoRA, and IA$^3$.
+\end{itemize}\vspace{-0pt}
+
+% {\textbf{Multimodal RAG for Education (Capstone)} (\href{https://github.com/MSDS-Capstone-Project/MultiModalRAG}{\underline{link}}) (\href{\paperlink}{\underline{pub}}) $|$ \emph{LangChain, Pinecone, OpenAI}} \hfill{2024 - 2025}\vspace{-4pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+% \item Scalable end-to-end RAG pipeline with multimodal embeddings (text, slides, video) for retrieval experimentation.
+% \item Currently expanding this research by implementing GraphRAG based temporal-linked retrieval.
+% % \item Optimized retrieval relevance while reducing inference compute cost by 20\%.
+% % \item Published peer-reviewed paper presented at AI for Education 2025.
+% \end{itemize}\vspace{-0pt}
+
+
+
+
+
+% {\textbf{GraphRAG-based ChatBot} (\href{https://github.com/vishugp}{\underline{link}}) $|$ \emph{LangChain, NetworkX, Pinecone}} \hfill{2025}\vspace{-5pt}
+% \begin{itemize}[leftmargin=0.1in, itemsep=1px, parsep=0pt]
+% \item Developed temporal-linked graph retrieval for classroom embeddings, improving context retention.
+% % \item Prototyped integration of knowledge graphs with RAG for time-aware query answering.
+% \end{itemize}\vspace{-5pt}
+
+% {\textbf{Vision-based Waste Classifier (WISE)} (\href{https://github.com/vishugp/WISE}{\underline{link}}) $|$ Computer Vision - \emph{TensorFlow, Keras, OpenCV}} \hfill{2025}\vspace{-5pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+% \item Trained deep learning classifier for real-time waste sorting from camera input.
+% % \item Deployed as prototype for smart city sustainable waste management.
+% \end{itemize}\vspace{0pt}
+
+{\textbf{Mahabharata Text Analytics} (\href{https://mahabharata.vishguru.com}{\underline{link}}) $|$ NLP - \emph{Topic Modeling, Text Analytics}} \hfill{2025}\vspace{-4pt}
+\begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+\item Applied NLP techniques to a 1.8M-word Sanskrit/English corpus for character and theme analysis.
+% \item Built interactive dashboards for exploration of narrative structures and entity networks.
+\end{itemize}
+}
+
+
+
+%----------------- CERTIFICATIONS -----------------
+\vspace{-15pt}
+\section{Certifications}
+% \vspace{2pt}
+
+\begin{itemize}[leftmargin=0.1in, itemsep=1px, parsep=0pt]
+
+\item{
+\href{\salink}{{AWS Certified Solutions Architect – Associate (SAA-C03), Amazon Web Services}} 
+\hfill{May 2025 - May 2028}}
+
+\vspace{-1pt}
+\item{
+\href{\mllink}{{AWS Certified Machine Learning – Specialty (MLS-C01), Amazon Web Services}} 
+\hfill{Jun 2025 - Jun 2028}}
+
+
+\end{itemize}
+\vspace{-21pt}
+
+%----------------- SKILLS ------------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.00in, label={}, itemsep=1px, parsep=0pt]
+
+
+
+\item{
+{\textbf{LLMs \& GenAI:} Transformers, LangChain, HuggingFace, RAG, Prompt Engineering, Fine-tuning and PEFT (LoRA, IA3)
+}}
+
+\item{
+{\textbf{Machine Learning:} Logistic Regression, GBMs, XGBoost, Ranking/Scoring, NLP, Recommendation Systems
+}}
+
+
+\item{
+{\textbf{Programming Languages:} Python, R, SQL, Scala, JavaScript}
+}
+
+\item{
+\small{\textbf{Visualization:} Power BI, Plotly Dash, d3.js, Matplotlib, Excel VBA}
+}
+
+\item{
+\small{\textbf{Data Engineering and Cloud:} Spark, Hadoop, Docker, APIs, Web Scraping, AWS (Certified), Azure Databricks}
+}
+
+
+
+
+
+
+
+
+% \item{
+% {\textsl{Cloud and Tools:} , Git, Conda, Flask}
+% }
+
+
+
+
+
+
+
+\end{itemize}
+\vspace{-18pt}
+
+
+%-------------------EDUCATION---------------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading
+    {University of Virginia {(UVA)}}
+    {GPA: 4.0/4.0}
+    {Master of Science in Data Science}
+    {Jun 2024 - May 2025}
+
+    % \vspace{3pt}
+    % \footnotesize{
+    % Data Science Ambassador {\textbullet}
+    % Teaching Assistant - Statistical Learning {\textbullet}
+    % Range Resident
+    % }
+
+    \vspace{12pt}
+    % \small{{Certifications:}
+    % {\href{\salink}
+    % {\textsl{AWS Solutions Architect - Associate}}},
+    % {\href{\mllink}
+    % {\textsl{AWS Machine Learning - Specialty}}}}
+    
+
+
+\resumeEduSubheading
+    {Birla Institute of Technology and Science \normalsize{(BITS Pilani)}}
+    % {Hyderabad, India}
+    {GPA: 3.8/4.0}
+    % {B.E. Mechanical Engineering, Minor in Data Science | GPA: 3.8/4.0}
+    {B.E. Mechanical Engineering, Minor in Data Science}
+    {Aug 2018 - Dec 2021}
+\resumeSubHeadingListEnd
+% \vspace{-10pt}
+
+
+
+
+
+
+%-------------------EOD-----------------------------
+\end{document}

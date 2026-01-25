@@ -1,0 +1,618 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{1.11} 
+
+\usepackage{ragged2e}
+\input{glyphtounicode}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% % Margins
+% \usepackage[margin=0.5in]{geometry}
+\usepackage[letterpaper,top=0.4in,bottom=0.4in,left=0.55in,right=0.55in]{geometry}
+
+
+% Basic settings
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0.08003pt}
+\setlength{\footskip}{4.08003pt}
+
+% % Section formatting
+% \titleformat{\section}
+% {\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule]
+\titleformat{\section}{\scshape\raggedright\normalsize}{}{-0.1em}{\vspace{-1pt}}[\color{black}\titlerule\vspace*{-5pt}]
+
+
+% PDF settings
+\pdfgentounicode=1
+
+% Custom commands
+
+
+\newcommand{\resumeItem}[1]{
+% \justifying
+  \item{\small{#1}}
+  % \vspace{-2px}
+}
+
+% % \textbf{-}
+% \newcommand{\resumeProject}[2]{
+% \justifying
+%   \item{\small{\textbf{\small{#1}}}: {#2}}
+% }
+
+\newcommand{\resumeeduSubheading}[4]{
+  \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\large{#1}} & {\small{#4}} \\
+      {{\small{#3}}} & {{\small{#2}}}
+    \end{tabular*}
+  \vspace{-0.4cm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\large{#1}}, \normalsize{#3}& {\small{#4}} 
+    \end{tabular*}
+  \vspace{-0.7cm}
+}
+
+% List environment commands
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\renewcommand\labelitemii{$\vcenter{\hbox{$\bullet$}}$}
+\newcommand{\resumeItemListStart}{
+\vspace{-1pt}
+  \begin{itemize}[leftmargin=0.18in, label=\textbullet]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+
+%------------------------------------------------------------
+
+
+\def\Summary{
+% Software Engineer (AI/ML) with 3+ years designing and deploying large-scale Machine Learning and GenAI systems across cloud, distributed data, and multimodal LLMs. Skilled in Python, Scala, JavaScript, Spark, and SQL with production experience in ML infrastructure, retrieval-augmented generation, recommendation engines, and scalable pipelines. Graduated from M.S. in Data Science (University of Virginia, 4.0 GPA) with peer-reviewed research on multimodal RAG optimization.
+
+
+% AI/ML Engineer with \textbf{3+ years} of applied ML experience and \textbf{M.S. in Data Science} (May 2025, UVA, 4.0 GPA) specializing in end-to-end AI systems from research to deployment. Published researcher in \textbf{multimodal RAG} optimization. Expert in Python, JavaScript, and C++ with 2x AWS certifications, proven ability to integrate ML and AI solutions into \textbf{cross-functional products}, and track record of transforming complex algorithms into scalable systems that solve real-world challenges in varied domains.
+
+
+% Machine Learning Engineer with 3+ years experience building scalable ML pipelines, risk models, and GenAI systems that deliver measurable business impact across domains. M.S. in Data Science (UVA, 4.0 GPA, May 2025). Specialized in LLMs, RAG, embeddings, and multimodal AI, with hands-on deployment using Amazon Bedrock (AWS Certified), LangChain, HuggingFace, and Pinecone. Proven track record in end-to-end ML development that drives measurable business impact.
+
+
+% Machine Learning / Analytics Engineer with 3+ years experience building scalable, recommendation and ranking systems, \textbf{informed by both data and user feedback}. Experienced in multimodal AI and embedding pipelines, with hands-on deployment in production environments. Proficient in data structures, algorithm design, and \textbf{ML model deployment at scale}. Passionate about combining technical rigor with \textbf{deep understanding of consumer behavior} to drive measurable business impact.
+
+
+% Data Scientist (AI/ML) with 3+ years of building successful \textbf{conversational AI}, recommendation engines and risk management systems, leveraging Python, SQL, Spark, and AWS (2x Certified) to deliver innovative, practical solutions. Expertise in \textbf{NLP}, large language models (LLMs), and \textbf{multimodal RAG}, and deploying production-grade model pipelines with bias detection and risk controls. Excited to bring my AI/ML expertise to \textbf{build the next-gen of virtual assistants} and redefine industry standards.
+
+% Data Scientist (AI/ML) with 3+ years of building ad optimization, recommendation, and NLP systems at scale, leveraging Python, SQL, Spark, and AWS. Proven track record of driving advertising ROI, scaling experimentation platforms, and surfacing insights through dashboards. Skilled in NLP, LLMs, and multimodal retrieval with experience leading cross-functional data initiatives.
+
+% Senior Data Scientist with experience in  \textbf{advertising optimization}, recommendations, and personalization systems. Skilled in Python, Spark, SQL and AWS (2x Certified), with expertise in experimentation design, causal inference, and building scalable analytics pipelines. Proven track record of \textbf{driving ad ROI improvements}, market segmentation, and automated KPI dashboards. Excited about connecting artists, audiences, and brands via applied analytics at scale to unlock engagement and growth.
+
+% Senior Data Scientist with 3+ years of experience with a passion in applying ML, AI, and analytics to steer data-driven decisions in retail, operations, and finance. Experienced in multimodal RAG pipelines, fine-tuning LLMs with PEFT, and deploying scalable GenAI solutions on cloud platforms (AWS 2x Certified). Proven track record in forecasting, optimization, and translating complex models into actionable insights for stakeholders and C-suite leaders. Recent M.S. in Data Science (UVA, May ’25, 4.0 GPA).
+
+% I’m committed to building systems that think, learn, and perform at scale. From multimodal retrieval based LLM pipelines and recommendation engines to PEFT-driven LLM solutions, I specialize in translating vague ideas into systematic, production ready systems. I'm committed to driving solutions from concept to lasting impact. Recent M.S. in Data Science (UVA, 4.0 GPA).
+
+% Specialist in applying AI at cloud scale across retail and pharma, turning research advances into production-grade systems. From multimodal retrieval and recommendation pipelines to PEFT on LLMs, I’ve built distributed solutions on cloud that powered systems driving business transformation. My edge lies in bridging research innovation with enterprise deployment, owning the last mile from concept to production. M.S. in Data Science (UVA, 4.0 GPA) with published research on Multimodal RAG.
+
+% \textbf{Senior Data Scientist} specializing in designing and deploying \textbf{enterprise-scale ML} systems that bridge innovation and production. Expertise in recommendation engines, next-best-action models, customer attrition prediction, multimodal RAG, and LLM applications. Proven record of leading cross-functional initiatives to deliver \textbf{cloud-native analytics solutions} that drive measurable impact. M.S. in Data Science (UVA, 4.0 GPA) with published research on multimodal retrieval and applied AI.
+
+AI Engineer and Senior Data Scientist specializing in enterprise-scale ML, GenAI, and agentic AI systems. Expertise in LLM orchestration, multimodal RAG, recommendation engines, and operational optimization. Proven record of designing reusable ML frameworks, leading teams, and delivering real-time AI solutions that drive measurable business impact. M.S. in Data Science (UVA, 4.0 GPA) with published research on multimodal retrieval and applied AI.
+}
+
+
+%------------------------------------------------------------
+
+\begin{document}
+
+
+% Header/Contact Information
+\def\name{Vish Guruvayur}
+\def\phone{(571) 602-2034}
+\def\city{Gainesville, VA}
+\def\email{vishguru2704@gmail.com}
+\def\LinkedIn{linkedin.com/in/vishgp}
+\def\github{vishugp}
+\def\role{Data Scientist}
+\def\paperlinkold{https://intextbooks.science.uu.nl/workshop2025/files/iTextbooks2025_paper_3.pdf}
+\def\paperlink{https://ceur-ws.org/Vol-4010/itb25_s2s3.pdf}
+\def\salink{https://www.credly.com/badges/12da6e0d-aa6a-4a6e-a598-93941c4a35c6}
+\def\mllink{https://www.credly.com/badges/c8b32ca5-03da-4578-a92f-9e11d0011ee8}
+
+\vspace*{-30pt}
+\begin{center}
+    {\Huge{\textbf{\name}}}\\
+    \vspace{3pt}
+    \footnotesize 
+    
+    \href{tel:+1 \phone}{\phone} $|$ 
+    \href{mailto:\email}{{\email}} $|$ 
+    \href{https://github.com/\github}{github.com/\github} $|$
+    \href{https://www.linkedin.com/in/vishgp}{\LinkedIn} $|$
+    \href{https://vishguru.com}{{vishguru.com}}
+\end{center}
+\vspace{-30pt}
+% \justifying
+% \section{Summary}
+% \small{\Summary}
+% \vspace{-12pt}
+
+%-------------------EXPERIENCE---------------------------
+\section{Experience}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+    {AI Engineer}
+    {Charlottesville, VA}
+    {University of Virginia}
+    {Nov 2024 - Present}
+    
+    \resumeItemListStart
+        % \resumeItem{Leading applied research on leveraging classroom content (text, images, and videos) using \textbf{multimodal and hybrid RAG} methods to improve content retrieval, comprehension, and summarization.}
+        % \resumeItem{Designed a \textbf{conversational AI tutor} by building a \textbf{multimodal RAG} system on classroom content, helping students discover and comprehend relevant educational material while improving accessibility of learning resources.}
+        % \resumeItem{Designed a \textbf{conversational AI tutor} by building a \textbf{multimodal RAG} system on classroom content, improving accessibility of learning resources and helping students discover and comprehend relevant educational material.}
+    
+        % % \resumeItem{Built an end-to-end RAG pipeline with \textbf{10,000+ multimodal embeddings} using LangChain and Pinecone DB, with experiments to optimize retrieved media vectors, improving answer relevance and \textbf{reducing LLM compute cost by 20\%}.}
+        % \resumeItem{Built an \textbf{end-to-end multimodal retrieval pipeline} with 10,000+ embeddings, incorporating re-ranking and agentic approach to prioritize relevant media for the LLM, maximizing answer relevance and context recall.}
+    
+        % \resumeItem{Awarded “Most Compelling Data Visualizations” at UVA's Capstone Showcase; co-authored a \href{\paperlink}{\textbf{peer-reviewed paper} ({\underline{link}})} presented at AI for Education 2025, introducing innovative techniques for educational content retrieval and evaluation.}
+    
+        % \resumeItem{Currently conducting R\&D on a \textbf{GraphRAG-based LLM assistant}, extending prior research to leverage structured retrieval over temporally-linked educational content, enhancing student support and informing instructional content design.}
+
+
+        % \resumeItem{Designing a \textbf{conversational AI tutor} using \textbf{multimodal RAG} on classroom content, improving accessibility of traditional resources and helping create a more conducive cohersive class environment.}
+        \resumeItem{Developing a live \textbf{conversational AI tutor} that continuously integrates multimodal course materials to provide personalized guidance and improve student engagement and accessibility.}
+        
+        % \resumeItem{Built an \textbf{end-to-end multimodal retrieval pipeline} with 10,000+ files, incorporating \textbf{re-ranking and agentic strategies} to prioritize high-relevance media, boosting compute efficiency while improving answer relevance and accuracy.}
+
+        \resumeItem{Engineering a reusable, scalable multimodal RAG pipeline for 10,000+ files with agentic orchestration and graph-based reasoning, improving answer accuracy and compute efficiency for applied educational AI deployment and research.}
+        
+        % \resumeItem{Awarded “Most Compelling Data Visualizations” at UVA's Capstone Showcase; co-authored a \href{\paperlink}{\textbf{peer-reviewed paper}} presented at AI for Education 2025, introducing novel techniques for educational content retrieval and evaluation.}
+        \resumeItem{Conducting research on agentic multimodal retrieval and evaluation, presented at AI for Education 2025 (\href{\paperlink}{\underline{link}}) and recognized with the UVA Capstone Showcase award for “Most Compelling Data Visualizations.”}
+        % \resumeItem{Conducting R\&D on a \textbf{Graph based LLM assistant}, leveraging structured retrieval over temporally-linked educational content to enhance student support and inform instructional design.}
+
+    \resumeItemListEnd
+
+
+
+% \resumeSubheading
+%     {Senior Data Scientist (Tech Lead)}
+%     {Bethlehem, PA}
+%     {Piramal Pharma Ltd.}
+%     {Jan 2022 - Jun 2024}
+
+%     \resumeItemListStart
+%     % \resumeItem{Established and \textbf{led the Data Science team} for the Critical Care division, embedding analytics into key business functions while mentoring junior scientists to deliver scalable end-to-end solutions with best practices.}
+
+%     % \resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by providing analytical visibility into risk conditions through causal inference and SARIMA-based time-series forecasting of inventory, write-offs, and sales under volatile market conditions.}
+
+%     % \resumeItem{Reduced Advertising Cost of Sales \textbf{from 45\% to 8\% in 6 months} for high-priority e-commerce products by leveraging alternative data through web-scraping and NLP to drive market segmentation and A/B-tested ad keyword optimizations.}
+
+%     % \resumeItem{Partnered with CFO and senior leadership to develop market segmentation models and competitive intelligence dashboards (AWS, Power BI), guiding capital allocation, price elasticity, and portfolio growth decisions across 5 global regions.}
+
+%     % \resumeItem{Received the “Piramal Excellence Award” for building \textbf{30+ ML and analytics pipelines} with PySpark CI/CD to automate retraining triggers and KPI reporting, improving operational efficiency by 85\%.}
+
+%     % \resumeItem{Enabled CHRO-led initiatives to improve employee retention by developing an \textbf{NLP-based sentiment analytics engine} (VADER, TextBlob) that analyzed performance reviews to identify development areas and guide personalized growth plans.}
+
+
+%     \resumeItem{Established and \textbf{led the Data Science team} for Critical Care division, embedding high-impact analytics into key business functions and mentoring junior scientists to deliver scalable end-to-end solutions with best practices.}
+
+
+%     \resumeItem{Built a \textbf{real-time web-scraping + NLP engine} using Python, Spark and AWS Lambda to monitor competition, drive market segmentation, and feed A/B-tested ad optimizations, reducing advertising cost of sales from 45\% to 8\% in 6 months.}
+
+%     % \resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by ranking inventory risk using causal inference and ARIMA-based forecasting of stock, write-offs, and sales under volatile demand, enabling targeted interventions and continuous monitoring.}
+%     \resumeItem{Deployed \textbf{ARIMA + Causal Inference} based forecasting service on Databricks using inventory, sales and demand data, enabling targeted inventory interventions and preventing \$1.2M in quarterly write-off losses.}
+
+%     \resumeItem{Delivered \textbf{30+ ML and analytics pipelines} using Databricks and SQL to automate KPI reporting dashboards, model retraining triggers and CI/CD, improving overall operational efficiency by 85\%.}
+
+    
+%     \resumeItem{Worked with CFO to \textbf{transform TB-scale market data} using Python and Spark on AWS, building market segmentation and ranking models, with interactive Power BI dashboards to inform strategic investment and portfolio decisions.}
+
+    
+    
+    
+    
+
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+    
+%     \resumeItemListEnd
+
+% \resumeSubheading
+%     {Data Scientist}
+%     {Mumbai, India}
+%     {Piramal Pharma Ltd.}
+%     {Jul 2021 - Dec 2021}
+
+%     \resumeItemListStart
+%     % \resumeItem{Intern in the Consumer Products division, delivering data science projects with high-impact in business-facing initiatives.}
+
+%     % \resumeItem{Drove a \textbf{15\% quarterly increase} in market penetration across 400,000 retailers by building the company’s first product recommendation system, coding a tree-based custom FP-Growth algorithm from scratch.}
+
+%     \resumeItem{Built company's first  product recommendation engine using the tree-based \textbf{FP-Growth Algorithm} (coded from scratch), driving 15\% market penetration growth \textbf{across 400,000 retailers}.}
+
+%     % \resumeItem{Boosted high-performing sales reps’ \textbf{retention to 93\%} by developing an attrition prediction model using an ensemble of XGBoost and Logistic Regression on historical sales and employee data.}
+
+%     \resumeItem{Developed attrition prediction service by building an ensemble model of \textbf{XGBoost + Logistic Regression}, with integrated SHAP-based interpretability, achieving 93\% retention of high performers.}
+
+
+
+%     % \resumeItem{Recognized for impact by the CEO and offered a leadership role to build and head a new data science team.}
+%     \resumeItemListEnd
+    
+
+\vspace{-5pt}
+\resumeSubheading
+    {Senior Data Scientist (Tech Lead)}
+    {Bethlehem, PA}
+    {Piramal Pharma Ltd.}
+    {Jul 2021 - Jun 2024}
+
+    \resumeItemListStart
+    % \resumeItem{Established and \textbf{led the Data Science team} for the Critical Care division, embedding analytics into key business functions while mentoring junior scientists to deliver scalable end-to-end solutions with best practices.}
+
+    % \resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by providing analytical visibility into risk conditions through causal inference and SARIMA-based time-series forecasting of inventory, write-offs, and sales under volatile market conditions.}
+
+    % \resumeItem{Reduced Advertising Cost of Sales \textbf{from 45\% to 8\% in 6 months} for high-priority e-commerce products by leveraging alternative data through web-scraping and NLP to drive market segmentation and A/B-tested ad keyword optimizations.}
+
+    % \resumeItem{Partnered with CFO and senior leadership to develop market segmentation models and competitive intelligence dashboards (AWS, Power BI), guiding capital allocation, price elasticity, and portfolio growth decisions across 5 global regions.}
+
+    % \resumeItem{Received the “Piramal Excellence Award” for building \textbf{30+ ML and analytics pipelines} with PySpark CI/CD to automate retraining triggers and KPI reporting, improving operational efficiency by 85\%.}
+
+    % \resumeItem{Enabled CHRO-led initiatives to improve employee retention by developing an \textbf{NLP-based sentiment analytics engine} (VADER, TextBlob) that analyzed performance reviews to identify development areas and guide personalized growth plans.}
+
+    %%%%%%%%%%%%%%%%%%%%%%5
+    % \resumeItem{Joined as an intern and was promoted to \textbf{lead a new Data Science team} for the Critical Care division embedding analytics-driven decision systems into business functions and mentoring junior scientists on best practices.}
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % \resumeItem{Delivered \textbf{30+ ML and analytics pipelines} using Databricks and Spark to automate KPI reporting dashboards, model retraining triggers and CI/CD, improving overall operational efficiency by 85\%.}
+
+    
+    % \resumeItem{Built company's first product recommendation engine using the tree-based \textbf{FP-Growth Algorithm} (coded from scratch), \textbf{driving 15\% market penetration} growth quarterly across 400,000 retailer.}
+
+    % \resumeItem{Designed and deployed company’s first production recommendation engine (FP-Growth, built from scratch) serving over 400,000 retailers, driving 15\% market penetration growth.}
+
+    % \resumeItem{Boosted high-performing sales reps’ \textbf{retention to 93\%} by developing an attrition prediction model using an ensemble of XGBoost and Logistic Regression on historical sales and employee data.}
+
+    % \resumeItem{Built a \textbf{real-time web-scraping + NLP engine} using Python, Spark and AWS Lambda to monitor competition, drive market segmentation, and feed A/B-tested ad optimizations, reducing advertising cost of sales from \textbf{45\% to 8\% in 6 months}.}
+    % \resumeItem{\textbf{Reduced Advertising Cost of Sales by 37\% in 6 months} by building an end-to-end retail media measurement framework (Market Mix Modeling + NLP-driven keyword optimizations, A/B-tested campaigns), enabling more efficient ad spend.}
+
+    % \resumeItem{Worked with CFO to \textbf{transform terabytes of market data} using Python and Spark on AWS, building market segmentation and ranking models, with interactive Power BI dashboards to inform strategic investment and portfolio decisions.}
+
+    % \resumeItem{Built the company’s first \textbf{product recommendation engine}, coding a custom tree-based FP-Growth algorithm optimized by user and retailer feedback, driving \textbf{15\% growth} in quarterly market penetration \textbf{across 400,000 retailers}.}
+    
+    
+
+    % \resumeItem{Improved analytical visibility into inventory risk conditions via causal inference and forecasting, \textbf{saving \$1.2M} in quarterly losses in write-offs under volatile market conditions.}
+    % \resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by ranking inventory risk using causal inference and stochastic dynamic programming on stock, write-offs, and sales under volatile demand, enabling targeted interventions and continuous monitoring.}
+
+    % \resumeItem{Enabled cross-sell optimization strategy using Multi Touch Attribution analysis, including product recommendations, click paths, and browsing behavior, achieving a \textbf{10\% lift} in complementary product revenue within 3 months.}
+
+
+    
+
+    % \resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by providing analytical visibility into risk conditions through causal inference and SARIMA-based time-series forecasting of inventory, write-offs, and sales under volatile market conditions.}
+    
+
+    % \resumeItem{Developed attrition prediction service by building an ensemble model of \textbf{XGBoost + Logistic Regression}, with integrated SHAP-based interpretability, \textbf{achieving 93\% retention} of high performing sales reps.}
+    
+
+    
+    
+    
+
+    % \resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by ranking inventory risk using causal inference and ARIMA-based forecasting of stock, write-offs, and sales under volatile demand, enabling targeted interventions and continuous monitoring.}
+    % \resumeItem{Deployed \textbf{ARIMA + Causal Inference} based forecasting service on Databricks using inventory, sales and demand data, enabling targeted inventory interventions and preventing \$1.2M in quarterly write-off losses.}
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+    % \resumeItem{Intern in the Consumer Products division, delivering data science projects with high-impact in business-facing initiatives.}
+
+    % \resumeItem{Drove a \textbf{15\% quarterly increase} in market penetration across 400,000 retailers by building the company’s first product recommendation system, coding a tree-based custom FP-Growth algorithm from scratch.}
+
+    
+
+
+
+    % \resumeItem{Recognized for impact by the CEO and offered a leadership role to build and head a new data science team.}
+
+
+
+
+
+    \resumeItem{Journey from intern to \textbf{team lead}, establishing a new Data Science team for the Critical Care division, delivering scalable analytics and machine learning solutions across multiple business functions.}
+
+% \resumeItem{Delivered over \textbf{30+ ML and analytics pipelines} using PySpark on Databricks, automating KPI dashboards, model retraining triggers, and CI/CD workflows, improving operational efficiency by \textbf{85\%}.}
+
+\resumeItem{Delivered over \textbf{30+ ML and analytics pipelines} using PySpark on Databricks, automating KPI dashboards, model retraining triggers, and CI/CD workflows.}
+
+\resumeItem{Developed the company’s first \textbf{product recommendation engine} with a custom FP-Growth algorithm, optimizing decisions based on user and retailer feedback and driving 15\% quarterly market penetration growth across 400,000+ retail locations.}
+
+\resumeItem{Built a \textbf{retail media optimization framework} integrating market mix modeling, NLP-driven keyword optimization, and A/B testing, reducing Advertising Cost of Sales by \textbf{37\% in six months} and providing a methodology for repeated campaigns.}
+
+% \resumeItem{\textbf{Reduced Advertising Cost of Sales by 37\% in 6 months} through data-driven  retail media measurement framework combining Market Mix Modeling, NLP-driven keyword optimization, and A/B-tested campaigns.}
+
+% \resumeItem{Worked closely with CFO to transform \textbf{terabytes of market data} using Python, Spark to build market segmentation and ranking models, with interactive Power BI dashboards guiding strategic investment and portfolio decisions.}
+
+
+
+\resumeItem{\textbf{Prevented \$1.2M in quarterly losses} by Implemented a dynamic inventory risk ranking system using causal inference and stochastic dynamic programming to guide stock and write-off decisions under volatile demand.}
+
+\resumeItem{Partnered with HR to deliver an \textbf{explainable attrition prediction model} using an ensemble of XGBoost and Logistic Regression, ensuring ethical, transparent AI adoption and actionable insights for workforce management.}
+
+    \resumeItemListEnd
+
+
+
+    
+\resumeSubHeadingListEnd
+\vspace{-19pt}
+
+\section{Related Projects}
+
+
+\small{
+
+% {\textbf{CNN Vision-based Waste Classifier} (\href{https://github.com/vishugp/WISE}{\underline{link}}) $|$ \emph{TensorFlow, Keras, OpenCV}} \hfill{2025}\vspace{-5pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+% \item Worked with deep learning CNN-ensemble classifier for real-time waste sorting from images.
+% % \item Deployed as prototype for smart city sustainable waste management.
+% \end{itemize}\vspace{0pt}
+% {\textbf{Greece Cruise Trip Planner} (\href{https://github.com/vishugp/Trip}{\underline{link}}) $|$ \emph{Google Maps API, Geo-Spatial Mapping}} \hfill{2025}\vspace{-4pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+% \item Built a personalized trip planner for my family’s Greece cruise, organizing daily outings with hour-by-hour scheduling.
+% \item Integrated Live Google Maps API to calculate real-time travel times and optimize routes
+% \end{itemize}
+
+
+% {\textbf{Spotify Artist Network Graph} (\href{https://vishugp.github.io/MusicMandala}{\underline{link}}) $|$ \emph{Spotify API, D3.js, Network Analysis}} \hfill{2025}\vspace{-4pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=0px, parsep=0pt]
+% \item Built an interactive network visualization of artists and collaborations using Spotify’s API.
+% \item Enabled exploration of artist influence pathways and genre communities through graph analysis.
+% \end{itemize}\vspace{-0pt}
+
+% {\textbf{Indian Classical Music - Raga Visualizer} (\href{https://carnatic.vishguru.com}{\underline{link}}) $|$ \emph{Python, Javascript}} \hfill{2025}\vspace{-5pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=0px, parsep=0pt]
+% \item Developed an interactive tool to visualize and learn Indian classical ragas from live audio.
+
+% \end{itemize}\vspace{-0pt}
+
+
+
+
+% {\textbf{Multimodal RAG for Education (UVA MSDS)} (\href{https://github.com/MSDS-Capstone-Project/MultiModalRAG}{\underline{link}}) $|$ \emph{LangChain, Pinecone, OpenAI}} \hfill{2024 - 2025}\vspace{-4pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+% \item Scalable end-to-end RAG pipeline with multimodal embedding databases for retrieval experimentation.
+% \item{Awarded “Most Compelling Data Visualizations” and co-authored \href{\paperlink}{\textbf{peer-reviewed paper} ({\underline{link}})} at AIED 2025.}
+
+
+% \item Currently expanding this research by implementing GraphRAG based retrieval as a part-time research scientist.
+% \item Optimized retrieval relevance while reducing inference compute cost by 20\%.
+% \item Published peer-reviewed paper presented at AI for Education 2025.
+% \end{itemize}\vspace{-0pt}
+
+
+
+{\textbf{Comparative Experiments on PEFT Methods} (\href{https://github.com/vishugp/Comparative_LLM_FineTuning}{\underline{link}}) $|$ \emph{HuggingFace, PyTorch, LoRA, QLoRA, Prefix Tuning, IA$^3$}} \hfill{2025}\vspace{-4pt}
+\begin{itemize}[leftmargin=0.18in, itemsep=0px, parsep=0pt]
+\item Benchmarked PEFT methods on GPT-2 for CommonsenseQA, analyzing accuracy vs. compute trade-offs.  
+\item Achieved 50\% validation accuracy on small GPT-2, outperforming zero-shot GPT-2 large with minimal resources.
+\item Showed small, targeted fine-tuned models can match larger models, improving reasoning, accessibility, and efficiency.  
+
+\end{itemize}\vspace{-0pt}
+
+
+
+% {\textbf{LLM Fine-Tuning and PEFT Experiments} (\href{https://github.com/vishugp/Comparative_LLM_FineTuning}{\underline{link}}) $|$ \emph{HuggingFace, PyTorch, LoRA, QLoRA, IA$^3$}} \hfill{2025}\vspace{-4pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=0px, parsep=0pt]
+% \item Benchmarked GPT-2 models on CommonsenseQA with full-model vs. PEFT fine-tuning.
+% \item Optimized accuracy vs. compute trade-offs to demonstrate LLM's cognitive adaptation strategies.
+
+% % % \item Evaluated trade-offs in accuracy, efficiency, and resource cost for LoRA, QLoRA, and IA$^3$.
+% \end{itemize}\vspace{-0pt}
+
+
+
+
+% {\textbf{GraphRAG-based ChatBot} (\href{https://github.com/vishugp}{\underline{link}}) $|$ \emph{LangChain, NetworkX, Pinecone}} \hfill{2025}\vspace{-5pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+% \item Developed temporal-linked graph retrieval for classroom embeddings, improving context retention.
+% % \item Prototyped integration of knowledge graphs with RAG for time-aware query answering.
+% \end{itemize}\vspace{-5pt}
+
+
+
+% {\textbf{Mahabharata Text Analytics} (\href{https://mahabharata.vishguru.com}{\underline{link}}) $|$ \emph{NLP, Topic Modeling, Text Analytics}} \hfill{2025}\vspace{-4pt}
+% \begin{itemize}[leftmargin=0.18in, itemsep=1px, parsep=0pt]
+% \item Applied NLP techniques on 1.8M-word Sanskrit/English corpus for character and theme exploratory analysis.
+% % \item Built interactive dashboards for exploration of narrative structures and entity networks.
+% \end{itemize}
+}
+\vspace{-19pt}
+
+%----------------- CERTIFICATIONS -----------------
+\section{Certifications}
+\vspace{2pt}
+
+\resumeItemListStart
+
+\resumeItem{
+\href{\salink}{{AWS Certified Solutions Architect – Associate (SAA-C03), Amazon Web Services}} 
+\hfill{May 2025 - May 2028}}
+
+\vspace{-5pt}
+\resumeItem{
+\href{\mllink}{{AWS Certified Machine Learning – Specialty (MLS-C01), Amazon Web Services}} 
+\hfill{Jun 2025 - Jun 2028}}
+
+
+\resumeItemListEnd
+\vspace{-21pt}
+
+
+
+
+%----------------- SKILLS ------------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.00in, label={}, itemsep=2px, parsep=-1pt]
+
+
+\item{
+{\textbf{Machine Learning:} Logistic Regression, GBMs, XGBoost, Ranking/Scoring, NLP, Recommendation Systems
+}}
+
+\item{
+{\textbf{LLMs \& GenAI:} Transformers, LangChain, LangGraph, HuggingFace, RAG, Fine-tuning and PEFT (LoRA, IA$^3$, Prefix Tuning)
+}}
+
+
+
+
+
+
+
+\item{
+{\textbf{Languages:} Python, R, SQL,  JavaScript}\hspace{0.8cm}
+\small{\textbf{Visualization:} Power BI, Matplotlib, Plotly Dash, d3.js, Excel VBA}
+}
+
+
+
+
+% \item{
+% {\textbf{Software Practices:} MLOps, CI/CD, Unit Testing, Agile/Scrum, Git  }}
+
+
+
+\item{
+\small{\textbf{Infra and Systems:} Spark, Hadoop, Docker, APIs, Web Scraping, AWS (2x Certified), Azure Databricks}
+}
+
+
+
+
+
+
+
+
+% \item{
+% {\textsl{Cloud and Tools:} , Git, Conda, Flask}
+% }
+
+
+
+
+
+
+
+\end{itemize}
+\vspace{-21pt}
+
+
+%-------------------EDUCATION---------------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeeduSubheading
+    {University of Virginia {(UVA)}}
+    % {Charlottesville, VA}
+    {GPA: 4.0/4.0}
+    {Master of Science in Data Science}
+    {Jun 2024 - May 2025}
+
+    \vspace{1pt}
+    \footnotesize{
+    Data Science Ambassador {\textbullet}
+    Teaching Assistant - Statistical Learning (Prof. Peter Gedeck) {\textbullet}
+    Range Resident
+    }
+
+    \vspace{1pt}
+    % \small{{Certifications:}
+    % {\href{\salink}
+    % {\textsl{AWS Solutions Architect - Associate}}},
+    % {\href{\mllink}
+    % {\textsl{AWS Machine Learning - Specialty}}}}
+    
+
+
+\resumeeduSubheading
+    {Birla Institute of Technology and Science \normalsize{(BITS Pilani)}}
+    % {Hyderabad, India}
+    {GPA: 8.8/10.0}
+    % {B.E. Mechanical Engineering, Minor in Data Science | GPA: 3.8/4.0}
+    {B.E. Mechanical Engineering, Minor in Data Science}
+    {Aug 2018 - Dec 2021}
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------EOD-----------------------------
+\end{document}
